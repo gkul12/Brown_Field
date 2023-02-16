@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:17
 EXPOSE 9969
-Add build/libs/brownfield.jar brownfield.jar
+COPY /build/libs/BrownField-0.0.1-SNAPSHOT.jar brownfield.jar
 ENTRYPOINT ["java", "-jar", "brownfield.jar"]
