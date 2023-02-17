@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import com.cg.backend.repository.AirportRepository;
 
 import com.cg.backend.annotations.ExcludedFromGeneratedCodeCoverage;
 import com.cg.backend.entity.Airports;
