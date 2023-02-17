@@ -58,6 +58,11 @@ public class UserController
 		return userservice.loginUser(loginRequest);
 	}
 	
+	@PostMapping("/searchLoggedUser/{email}")
+	public User searchLoggedUser(@PathVariable String email) 
+	{
+		return userservice.searchLoggedUser(email);
+	}
 //	@PostMapping("/send")
 //	@EventListener(ApplicationReadyEvent.class)
 //	public void sendMail() {
