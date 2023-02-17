@@ -25,6 +25,8 @@ public class FlightController {
 
 	@Autowired
 	FlightService fService;
+	@Autowired
+	AirportRepository arepo;
 	
 	@PostMapping("/addFlight")
 	ResponseEntity<String> addFlight(@RequestBody Flight airplane) throws ParseException, AeroplaneNotFoundException {
@@ -73,6 +75,13 @@ public class FlightController {
 		return fService.searchFlight(flightNumber);
 		
 	}
-
+	@PostMapping("/addAirports")
+	public void addAirports(@RequestBody List<Airports> list)
+	{
+		for(Airports a:list)
+		{
+			arepo.save(a);
+		}
+	}
 	
 }
