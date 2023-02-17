@@ -97,5 +97,14 @@ public class UserService
 		return ResponseEntity.ok("Login Successful!");
 		
 	}
+	
+	public User searchLoggedUser(String email) {
+		// TODO Auto-generated method stub
+	
+			return userdao.findByEmail(email).get();
+//			return guestrepo.findAllByEmail(email).get();
+		
+			
+	}
 
 }
