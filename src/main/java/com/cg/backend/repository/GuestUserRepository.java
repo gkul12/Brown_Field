@@ -16,4 +16,7 @@ public interface GuestUserRepository extends JpaRepository<GuestUser,Integer>{
 	 
 	 @Query(value="select * from guestuser_table where first_name = ?1",nativeQuery=true)
 		public List<GuestUser> getByFirstName(String firstName);
+	
+	@Query(value="select * from guestuser_table where email = ?1",nativeQuery=true)
+	public GuestUser findAllByEmail(String email);
 }
