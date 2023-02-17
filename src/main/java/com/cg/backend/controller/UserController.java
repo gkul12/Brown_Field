@@ -18,7 +18,7 @@ import com.cg.backend.exception.UserDoesNotExistsException;
 import com.cg.backend.repository.AdminDao;
 import com.cg.backend.repository.UserDao;
 import com.cg.backend.service.UserService;
-
+import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  * @author mlakhe
